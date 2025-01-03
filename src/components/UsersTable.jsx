@@ -30,17 +30,21 @@ const UsersTable = () => {
         <table className="min-w-full bg-white rounded border border-gray-300">
           <thead className="bg-gray-100">
             <tr>
-              <th className="py-2 px-4 border-b-2 border-r-2 border-gray-300 text-gray-600">
+              <th className="py-2 px-4  min-w-[10rem] border-b-2 border-r-2 border-gray-300 text-gray-600">
                 Name
               </th>
-              <th className="py-2 px-4 border-b-2 border-r-2 border-gray-300 text-gray-600">
+              <th className="py-2 px-4 min-w-[10rem]  border-b-2 border-r-2 border-gray-300 text-gray-600">
                 Username
               </th>
-              <th className="py-2 px-4 border-b-2 border-r-2 border-gray-300 text-gray-600">
+              <th className="py-2 px-4 min-w-[10rem]  border-b-2 border-r-2 border-gray-300 text-gray-600">
                 Email
               </th>
-              <th className="py-2 px-4 border-b-2 border-r-2 border-gray-300 text-gray-600">
+              <th className="py-2 px-4 min-w-[10rem]  border-b-2 border-r-2 border-gray-300 text-gray-600">
                 Phone
+              </th>
+
+              <th className="py-2 px-4 min-w-[10rem]  border-b-2 border-r-2 border-gray-300 text-gray-600">
+                Action
               </th>
             </tr>
           </thead>
@@ -51,17 +55,21 @@ const UsersTable = () => {
                 onClick={() => handleRowClick(user.id)}
                 className="hover:bg-gray-100 hover:cursor-pointer transition-colors"
               >
-                <td className="py-3 px-4 border-b border-r-2 border-gray-300">
-                  {user.name}
+                <td className="py-3 min-w-[10rem] px-4 border-b border-r-2 border-gray-300">
+                 <span className="line-clamp-1 truncate"> {user.name} </span> 
                 </td>
-                <td className="py-3 px-4 border-b border-r-2 border-gray-300">
+                <td className="py-3 min-w-[10rem] px-4 border-b border-r-2 border-gray-300">
                   {user.username}
                 </td>
-                <td className="py-3 px-4 border-b border-r-2 border-gray-300">
+                <td className="py-3 min-w-[10rem] px-4 border-b border-r-2 border-gray-300">
                   {user.email}
                 </td>
-                <td className="py-3 px-4 border-b border-r-2 border-gray-300">
-                  {user.phone}
+                <td className="py-3 min-w-[10rem]   px-4 border-b border-r-2 border-gray-300">
+                  <span className="line-clamp-1 truncate"> {user.phone}</span>
+                </td>
+
+                <td className="py-3 min-w-[10rem] px-4 items-center flex justify-center border-b border-r-2 border-gray-300">
+                  <button className="bg-gray-300 w-fit mx-auto hover:bg-gray-400 transition ease-in duration-200  rounded-md px-4 py-1 ">Veiw Details </button>
                 </td>
               </tr>
             ))}
